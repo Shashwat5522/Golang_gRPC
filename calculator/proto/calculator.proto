@@ -1,0 +1,22 @@
+syntax="proto3";
+
+package calculator;
+
+option go_package="github.com/Shashwat5522/go_gRPC/calculator/proto";
+
+
+message CalculatorRequest{
+    int32 number=1;
+}
+
+message CalculatorResponse{
+    int32 result=1;
+}
+
+service CalculatorService{
+    rpc FindPrime(CalculatorRequest) returns (stream CalculatorResponse);
+    rpc FindAverage(stream CalculatorRequest) returns(CalculatorResponse);
+    rpc FindMax(stream CalculatorRequest)returns(stream CalculatorResponse);
+    rpc Sqrt(CalculatorRequest)returns(CalculatorResponse);
+
+}
