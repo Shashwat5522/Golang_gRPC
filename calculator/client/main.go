@@ -21,6 +21,7 @@ func main() {
 
 	// findPrime(c)
 	// findAvg(c)
-	findMax(c)
+	// findMax(c)
+	doSqrt(c,10)
 
 }
